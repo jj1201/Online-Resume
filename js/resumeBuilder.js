@@ -81,7 +81,7 @@ education.display = function () {
 		$(".education-entry:last").append(formattedSchoolLocation);
 		$(".education-entry:last").append(formattedSchoolMajor);
 	}
-}
+};
 education.display();
 
 var work = {
@@ -91,9 +91,7 @@ var work = {
 		"employer" : "XCG Design Corp",
 		"location" : "San Fransico, CA",
 		"dates" : "March 2017 - Now",
-		"description" : "· Contributed to maintain and migrate databases. <br> \
-		· Assisted in planning and implementing inner system websites. <br>\
-		· Provided technical support to other web design team members as directed." 
+		"description" : "· Contributed to maintain and migrate databases. <br> · Assisted in planning and implementing inner system websites. <br>· Provided technical support to other web design team members as directed." 
 
 	}
 	]
