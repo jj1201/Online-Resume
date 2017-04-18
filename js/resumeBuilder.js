@@ -71,10 +71,10 @@ education.display = function () {
 	for(var i = 0; i < education.schools.length; i++) {
 		$("#education").append(HTMLschoolStart);
 		var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[i].name);
-		var formattedSchoolDegree = HTMLschoolName.replace("%data%", education.schools[i].degree);
-		var formattedSchoolDates = HTMLschoolName.replace("%data%", education.schools[i].dates);
-		var formattedSchoolLocation = HTMLschoolName.replace("%data%", education.schools[i].location);
-		var formattedSchoolMajor = HTMLschoolName.replace("%data%", education.schools[i].major);
+		var formattedSchoolDegree = HTMLschoolDegree.replace("%data%", education.schools[i].degree);
+		var formattedSchoolDates = HTMLschoolDates.replace("%data%", education.schools[i].dates);
+		var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.schools[i].location);
+		var formattedSchoolMajor = HTMLschoolMajor.replace("%data%", education.schools[i].major);
 		$(".education-entry:last").append(formattedSchoolName);
 		$(".education-entry:last").append(formattedSchoolDegree);
 		$(".education-entry:last").append(formattedSchoolDates);
@@ -89,7 +89,7 @@ var work = {
 	{
 		"title" : "Web Developer",
 		"employer" : "XCG Design Corp",
-		"location" : "San Fransico",
+		"location" : "San Fransico, CA",
 		"dates" : "March 2017 - Now",
 		"description" : "· Contributed to maintain and migrate databases. <br> \
 		· Assisted in planning and implementing inner system websites. <br>\
@@ -139,9 +139,11 @@ work.display = function () {
 		var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
 		var formattedEmployerTitle = formattedEmployer + formattedTitle;
 		var formattedWorkDate = HTMLworkDates.replace("%data%", work.jobs[job].dates);
+		var formattedWorkLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
 		var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
 		$(".work-entry:last").append(formattedEmployerTitle);
 		$(".work-entry:last").append(formattedWorkDate);
+		$(".work-entry:last").append(formattedWorkLocation);
 		$(".work-entry:last").append(formattedDescription);
 	}
 };
