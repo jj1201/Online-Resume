@@ -1,6 +1,4 @@
-/*
-This is empty on purpose! Your code to build the resume will go here.
- */
+
 var bio = {
 	"name" : "Jiajia Chen",
 	"role" : "Web Developer",
@@ -8,7 +6,7 @@ var bio = {
 		"mobile" : "858-729-4621",
 		"email" : "jiajiachen1993@gmail.com",
 		"github" : "jj1201",
-		"linedIn" : "Jiajia Chen",
+		"linkedIn" : "Jiajia Chen",
 		"location" : "San Francisco"
 	},
 	"welcomeMsg" : "Welcome to Jiajia's Resume!",
@@ -34,6 +32,11 @@ bio.display = function (){
 	$("#topContacts").append(formattedLocation);
 	$("#header").append(formattedwelcomeMsg);
 	$("#header").append(formattedbioPic);
+	$("#footerContacts").append(formattedMobile);
+	$("#footerContacts").append(formattedEmail);
+	$("#footerContacts").append(formattedGithub);
+	$("#footerContacts").append(formattedLinkedIn);
+	$("#footerContacts").append(formattedLocation);
 	if(bio.skills.length > 0) {
 		$("#header").append(HTMLskillsStart);
 		for(var i = 0; i < bio.skills.length; i++) {
@@ -44,27 +47,34 @@ bio.display = function (){
 };
 bio.display();
 
-
-
-
 var education = {
 	"schools" : [
 	{
 		"name" : "University of California, San Diego",
 		"location" : "San Diego, CA",
 		"degree" : "Masters",
-		"major" : ["CS"],
-		"dates" : "2015 - 2016"
+		"majors" : ["CS"],
+		"dates" : "2015 - 2016",
+		"url" : "https:////ucsd.edu//"
 
 	},
 	{
 		"name" : "Zhejiang University",
 		"location" : "Zhejiang, China",
 		"degree" : "BA",
-		"major" : ["CS"],
-		"dates" : "2010 - 2015"
+		"majors" : ["CS"],
+		"dates" : "2010 - 2015",
+		"url" : "http:////www.zju.edu.cn//english//"
 
-	}]
+	}],
+	"OnlineCourses" : [
+	{
+		"title" : "Front-End Web Developer Nanodegree Program",
+		"school" : "Udacity",
+		"dates" : "March, 2017 - Present",
+		"url" : "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
+	}
+	]
 };
 
 education.display = function () {
@@ -72,14 +82,26 @@ education.display = function () {
 		$("#education").append(HTMLschoolStart);
 		var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[i].name);
 		var formattedSchoolDegree = HTMLschoolDegree.replace("%data%", education.schools[i].degree);
+		var formattedSchoolNameDegree = formattedSchoolName + formattedSchoolDegree;
 		var formattedSchoolDates = HTMLschoolDates.replace("%data%", education.schools[i].dates);
 		var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.schools[i].location);
-		var formattedSchoolMajor = HTMLschoolMajor.replace("%data%", education.schools[i].major);
-		$(".education-entry:last").append(formattedSchoolName);
-		$(".education-entry:last").append(formattedSchoolDegree);
+		var formattedSchoolMajor = HTMLschoolMajor.replace("%data%", education.schools[i].majors);
+		$(".education-entry:last").append(formattedSchoolNameDegree);
 		$(".education-entry:last").append(formattedSchoolDates);
 		$(".education-entry:last").append(formattedSchoolLocation);
 		$(".education-entry:last").append(formattedSchoolMajor);
+	}
+	$("#education").append(HTMLonlineClasses);
+	for(var i = 0; i < education.OnlineCourses.length; i++) {
+		$("#education").append(HTMLschoolStart);
+		var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.OnlineCourses[i].title);
+		var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.OnlineCourses[i].school);
+		var formattedOnlineSchoolTitle = formattedOnlineTitle + formattedOnlineSchool;
+		var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.OnlineCourses[i].dates);
+		var formattedOnlineURL= HTMLonlineURL.replace("%data%", education.OnlineCourses[i].url);
+		$(".education-entry:last").append(formattedOnlineSchoolTitle);
+		$(".education-entry:last").append(formattedOnlineDates);
+		$(".education-entry:last").append(formattedOnlineURL);
 	}
 };
 education.display();
@@ -102,25 +124,25 @@ var projects = {
 	{
 		"title" : "Jiajia's Portfolio",
 		"dates" : "2017",
-		"description" : "",
+		"description" : "La historia del día de San Valentín comienza en el siglo tercero con un tirano emperador romano y un humilde mártir cristiano. El emperador era Claudio III. El cristiano era Valentino. Claudio había ordenado a todos los cristianos adorar a doce dioses, y había declarado que asociarse con cristianos era un crimen castigado con la pena de muerte. Valentino se había dedicado a los ideales de Cristo y ni siquiera las amenazas de muerte le detenían de practicar sus creencias. Valentino fué arrestado y enviado a prisión. Durante las últimas semanas de su vida, algo impresionante sucedió.",
 		"images" : []
 	},
 	{
 		"title" : "Online Resume",
-		"dates" : "",
-		"description" : "",
+		"dates" : "2017",
+		"description" : "La historia del día de San Valentín comienza en el siglo tercero con un tirano emperador romano y un humilde mártir cristiano. El emperador era Claudio III. El cristiano era Valentino. Claudio había ordenado a todos los cristianos adorar a doce dioses, y había declarado que asociarse con cristianos era un crimen castigado con la pena de muerte. Valentino se había dedicado a los ideales de Cristo y ni siquiera las amenazas de muerte le detenían de practicar sus creencias. Valentino fué arrestado y enviado a prisión. Durante las últimas semanas de su vida, algo impresionante sucedió.",
 		"images" : []
 	},
 	{
-		"title" : "",
-		"dates" : "",
-		"description" : "",
+		"title" : "Project3",
+		"dates" : "2017",
+		"description" : "La historia del día de San Valentín comienza en el siglo tercero con un tirano emperador romano y un humilde mártir cristiano. El emperador era Claudio III. El cristiano era Valentino. Claudio había ordenado a todos los cristianos adorar a doce dioses, y había declarado que asociarse con cristianos era un crimen castigado con la pena de muerte. Valentino se había dedicado a los ideales de Cristo y ni siquiera las amenazas de muerte le detenían de practicar sus creencias. Valentino fué arrestado y enviado a prisión. Durante las últimas semanas de su vida, algo impresionante sucedió.",
 		"images" : []
 	},
 	{
-		"title" : "",
-		"dates" : "",
-		"description" : "",
+		"title" : "Project4",
+		"dates" : "2017",
+		"description" : "La historia del día de San Valentín comienza en el siglo tercero con un tirano emperador romano y un humilde mártir cristiano. El emperador era Claudio III. El cristiano era Valentino. Claudio había ordenado a todos los cristianos adorar a doce dioses, y había declarado que asociarse con cristianos era un crimen castigado con la pena de muerte. Valentino se había dedicado a los ideales de Cristo y ni siquiera las amenazas de muerte le detenían de practicar sus creencias. Valentino fué arrestado y enviado a prisión. Durante las últimas semanas de su vida, algo impresionante sucedió.",
 		"images" : []
 	}
 	]
