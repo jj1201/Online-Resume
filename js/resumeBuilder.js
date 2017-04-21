@@ -9,7 +9,7 @@ var bio = {
 		"linkedIn" : "Jiajia Chen",
 		"location" : "San Francisco"
 	},
-	"welcomeMsg" : "Welcome to Jiajia's Resume!",
+	"welcomeMessage" : "Welcome to Jiajia's Resume!",
 	"skills" : ["html/css/javascript", "Database Adimistration", "Java Application"],
 	"biopic" :  "images/jiajia.jpg"
 };
@@ -22,7 +22,7 @@ bio.display = function (){
 	var formattedLinkedIn = HTMLlinkedIn.replace("%data%", bio.contacts.linedIn);
 	var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 	var formattedbioPic = HTMLbioPic.replace("%data%", bio.biopic);
-	var formattedwelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMsg);
+	var formattedwelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 	$("#header").prepend(formattedRole);
 	$("#header").prepend(formattedName);
 	$("#topContacts").append(formattedMobile);
@@ -94,14 +94,13 @@ education.display = function () {
 	$("#education").append(HTMLonlineClasses);
 	for(var i = 0; i < education.OnlineCourses.length; i++) {
 		$("#education").append(HTMLschoolStart);
-		var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.OnlineCourses[i].title);
+		var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.OnlineCourses[i].title).replace('#', education.OnlineCourses[i].url);
 		var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.OnlineCourses[i].school);
 		var formattedOnlineSchoolTitle = formattedOnlineTitle + formattedOnlineSchool;
 		var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.OnlineCourses[i].dates);
-		var formattedOnlineURL= HTMLonlineURL.replace("%data%", education.OnlineCourses[i].url);
 		$(".education-entry:last").append(formattedOnlineSchoolTitle);
 		$(".education-entry:last").append(formattedOnlineDates);
-		$(".education-entry:last").append(formattedOnlineURL);
+		
 	}
 };
 education.display();
@@ -120,30 +119,30 @@ var work = {
 };
 
 var projects = {
-	"project_list" : [
+	"projects" : [
 	{
 		"title" : "Jiajia's Portfolio",
 		"dates" : "2017",
 		"description" : "La historia del día de San Valentín comienza en el siglo tercero con un tirano emperador romano y un humilde mártir cristiano. El emperador era Claudio III. El cristiano era Valentino. Claudio había ordenado a todos los cristianos adorar a doce dioses, y había declarado que asociarse con cristianos era un crimen castigado con la pena de muerte. Valentino se había dedicado a los ideales de Cristo y ni siquiera las amenazas de muerte le detenían de practicar sus creencias. Valentino fué arrestado y enviado a prisión. Durante las últimas semanas de su vida, algo impresionante sucedió.",
-		"images" : []
+		"images" : ["http://placekitten.com/g/300/300"]
 	},
 	{
 		"title" : "Online Resume",
 		"dates" : "2017",
 		"description" : "La historia del día de San Valentín comienza en el siglo tercero con un tirano emperador romano y un humilde mártir cristiano. El emperador era Claudio III. El cristiano era Valentino. Claudio había ordenado a todos los cristianos adorar a doce dioses, y había declarado que asociarse con cristianos era un crimen castigado con la pena de muerte. Valentino se había dedicado a los ideales de Cristo y ni siquiera las amenazas de muerte le detenían de practicar sus creencias. Valentino fué arrestado y enviado a prisión. Durante las últimas semanas de su vida, algo impresionante sucedió.",
-		"images" : []
+		"images" : ["http://placekitten.com/g/300/300"]
 	},
 	{
 		"title" : "Project3",
 		"dates" : "2017",
 		"description" : "La historia del día de San Valentín comienza en el siglo tercero con un tirano emperador romano y un humilde mártir cristiano. El emperador era Claudio III. El cristiano era Valentino. Claudio había ordenado a todos los cristianos adorar a doce dioses, y había declarado que asociarse con cristianos era un crimen castigado con la pena de muerte. Valentino se había dedicado a los ideales de Cristo y ni siquiera las amenazas de muerte le detenían de practicar sus creencias. Valentino fué arrestado y enviado a prisión. Durante las últimas semanas de su vida, algo impresionante sucedió.",
-		"images" : []
+		"images" : ["http://placekitten.com/g/300/300"]
 	},
 	{
 		"title" : "Project4",
 		"dates" : "2017",
 		"description" : "La historia del día de San Valentín comienza en el siglo tercero con un tirano emperador romano y un humilde mártir cristiano. El emperador era Claudio III. El cristiano era Valentino. Claudio había ordenado a todos los cristianos adorar a doce dioses, y había declarado que asociarse con cristianos era un crimen castigado con la pena de muerte. Valentino se había dedicado a los ideales de Cristo y ni siquiera las amenazas de muerte le detenían de practicar sus creencias. Valentino fué arrestado y enviado a prisión. Durante las últimas semanas de su vida, algo impresionante sucedió.",
-		"images" : []
+		"images" : ["http://placekitten.com/g/300/300"]
 	}
 	]
 };
@@ -171,20 +170,20 @@ work.display = function () {
 work.display();
 
 projects.display = function() {
-	for(var i = 0; i < projects.project_list.length; i++) {
+	for(var i = 0; i < projects.projects.length; i++) {
 		$("#projects").append(HTMLprojectStart);
-		var formattedTitile = HTMLprojectTitle.replace("%data%", projects.project_list[i].title);
+		var formattedTitile = HTMLprojectTitle.replace("%data%", projects.projects[i].title);
 		$(".project-entry:last").append(formattedTitile);
 
-		var formattedDates = HTMLprojectDates.replace("%data%", projects.project_list[i].dates);
+		var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[i].dates);
 		$(".project-entry:last").append(formattedDates);
 
-		var formattedDescription = HTMLprojectDescription.replace("%data%", projects.project_list[i].description);
+		var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[i].description);
 		$(".project-entry:last").append(formattedDescription);
 
-		if(projects.project_list[i].images.length > 0) {
-			for(var j = 0; j < projects.project_list[j].images.length; j++) {
-				var formattedImage = HTMLprojectImage.replace("%data%", projects.project_list[i].images[j]);
+		if(projects.projects[i].images.length > 0) {
+			for(var j = 0; j < projects.projects[j].images.length; j++) {
+				var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[i].images[j]);
 				$(".project-entry:last").append(formattedImage);
 			}
 		}
