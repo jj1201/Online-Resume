@@ -1,16 +1,16 @@
 
 var bio = {
-	"name" : "Jiajia Chen",
-	"role" : "Web Developer",
+	"name" : "Jenny Chen",
+	"role" : "Software Developer",
 	"contacts" : {
 		"mobile" : "858-729-4621",
-		"email" : "jiajiachen1993@gmail.com",
+		"email" : "jennycjk1201@gmail.com",
 		"github" : "jj1201",
-		"linkedIn" : "Jiajia Chen",
+		"linkedIn" : "Jenny Chen",
 		"location" : "San Francisco"
 	},
-	"welcomeMessage" : "Welcome to Jiajia's Resume!",
-	"skills" : ["html/css/javascript", "Database Adimistration", "Java Application"],
+	"welcomeMessage" : "Hi there! I am currently loopking for software developer position in the bay area. I love designing and building fast and robust websites that everyone can enjoy and find helpful. Thanks for stopping by!",
+	"skills" : ["html/css/javascript", "jQuery", "Bootstrap & Knockout JS", "Gulp", "Jasmine", "Java"],
 	"biopic" :  "images/jiajia.jpg"
 };
 bio.display = function (){
@@ -19,7 +19,7 @@ bio.display = function (){
 	var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
 	var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
 	var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
-	var formattedLinkedIn = HTMLlinkedIn.replace("%data%", bio.contacts.linedIn);
+	var formattedLinkedIn = HTMLlinkedIn.replace("%data%", bio.contacts.linkedIn);
 	var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 	var formattedbioPic = HTMLbioPic.replace("%data%", bio.biopic);
 	var formattedwelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
@@ -30,8 +30,8 @@ bio.display = function (){
 	$("#topContacts").append(formattedGithub);
 	$("#topContacts").append(formattedLinkedIn);
 	$("#topContacts").append(formattedLocation);
-	$("#header").append(formattedwelcomeMsg);
 	$("#header").append(formattedbioPic);
+	$("#header").append(formattedwelcomeMsg);
 	$("#footerContacts").append(formattedMobile);
 	$("#footerContacts").append(formattedEmail);
 	$("#footerContacts").append(formattedGithub);
@@ -117,39 +117,6 @@ var work = {
 	}
 	]
 };
-
-var projects = {
-	"projects" : [
-	{
-		"title" : "Jiajia's Portfolio",
-		"dates" : "2017",
-		"description" : "La historia del día de San Valentín comienza en el siglo tercero con un tirano emperador romano y un humilde mártir cristiano. El emperador era Claudio III. El cristiano era Valentino. Claudio había ordenado a todos los cristianos adorar a doce dioses, y había declarado que asociarse con cristianos era un crimen castigado con la pena de muerte. Valentino se había dedicado a los ideales de Cristo y ni siquiera las amenazas de muerte le detenían de practicar sus creencias. Valentino fué arrestado y enviado a prisión. Durante las últimas semanas de su vida, algo impresionante sucedió.",
-		"images" : ["http://placekitten.com/g/300/300"]
-	},
-	{
-		"title" : "Online Resume",
-		"dates" : "2017",
-		"description" : "La historia del día de San Valentín comienza en el siglo tercero con un tirano emperador romano y un humilde mártir cristiano. El emperador era Claudio III. El cristiano era Valentino. Claudio había ordenado a todos los cristianos adorar a doce dioses, y había declarado que asociarse con cristianos era un crimen castigado con la pena de muerte. Valentino se había dedicado a los ideales de Cristo y ni siquiera las amenazas de muerte le detenían de practicar sus creencias. Valentino fué arrestado y enviado a prisión. Durante las últimas semanas de su vida, algo impresionante sucedió.",
-		"images" : ["http://placekitten.com/g/300/300"]
-	},
-	{
-		"title" : "Project3",
-		"dates" : "2017",
-		"description" : "La historia del día de San Valentín comienza en el siglo tercero con un tirano emperador romano y un humilde mártir cristiano. El emperador era Claudio III. El cristiano era Valentino. Claudio había ordenado a todos los cristianos adorar a doce dioses, y había declarado que asociarse con cristianos era un crimen castigado con la pena de muerte. Valentino se había dedicado a los ideales de Cristo y ni siquiera las amenazas de muerte le detenían de practicar sus creencias. Valentino fué arrestado y enviado a prisión. Durante las últimas semanas de su vida, algo impresionante sucedió.",
-		"images" : ["http://placekitten.com/g/300/300"]
-	},
-	{
-		"title" : "Project4",
-		"dates" : "2017",
-		"description" : "La historia del día de San Valentín comienza en el siglo tercero con un tirano emperador romano y un humilde mártir cristiano. El emperador era Claudio III. El cristiano era Valentino. Claudio había ordenado a todos los cristianos adorar a doce dioses, y había declarado que asociarse con cristianos era un crimen castigado con la pena de muerte. Valentino se había dedicado a los ideales de Cristo y ni siquiera las amenazas de muerte le detenían de practicar sus creencias. Valentino fué arrestado y enviado a prisión. Durante las últimas semanas de su vida, algo impresionante sucedió.",
-		"images" : ["http://placekitten.com/g/300/300"]
-	}
-	]
-};
-
-
-
-
 work.display = function () {
 	for(var job = 0; job < work.jobs.length; job++) {
 		$("#workExperience").append(HTMLworkStart);
@@ -167,24 +134,86 @@ work.display = function () {
 	}
 };
 
-work.display();
+//work.display();
+var projects = {
+	"projects" : [
+	{
+		"title" : "National park Map",
+		"github" : "https://github.com/jj1201/national-park-map",
+		"dates" : "2017",
+		"keywords" : "Google Map API, Kockout JS, jQuery, mobile responsive",
+		"description" : "I created a website that lists all the national parks and shows them in the map. I used Kockout JS to handle hte list and the filter functionality, and Google Map API to show all the park markers in the map and track click events on markers.",
+		"images" : ["images/project1_01.png", "images/project1_02.png"]
+	},
+	{
+		"title" : "Bug Invasion",
+		"github" : "https://github.com/jj1201/Bug-Invasion",
+		"dates" : "2017",
+		"keywords" : "Objective Oriented Programming, Game Design",
+		"description" : "As the name indicated, the bugs are coming and we are trying to survive till the last level.",
+		"images" : ["images/project2_01.png", "images/project2_02.png", "images/project2_03.png", "images/project2_04.png"]
+	},
+	{
+		"title" : "Portfolio",
+		"github" : "https://github.com/jj1201/Portfolio",
+		"dates" : "2017",
+		"keywords" : "Responsive website, Bootstrap",
+		"description" : "I created an online Portfolio as part of Udacity FrontEnd Nanodegree.",
+		"images" : ["images/project3_01.png"]
+	},
+	{
+		"title" : "Website Optimization",
+		"github" : "https://github.com/jj1201/Frontend-Project-Website-Optimization",
+		"dates" : "2017",
+		"keywords" : "Gulp",
+		"description" : "A website optimization project provided by Udacity. The task is to optimize a given website so that it reaches a target score at PageSpeed Insights and have frames per second rate 60 fps or higher.",
+		"images" : []
+	},
+	{
+		"title" : "Feedreader Test",
+		"github" : "https://github.com/jj1201/Feedreader-Test",
+		"dates" : "2017",
+		"keywords" : "Jasmine",
+		"description" : "This is a web-based application that reads RSS feeds. I have used the starter code from Udacity and the Jasmine framework to write a series of test suites to test out certain functionalities.",
+		"images" : ["images/project5_01.png"]
+	},
+	{
+		"title" : "Block Game",
+		"github" : "https://github.com/jj1201/Block-Game",
+		"dates" : "2017",
+		"keywords" : "JAVA",
+		"description" : "It is a a Tetris-like game, in which players can drag and drop shapes made of blocks on the board. Once a row or a column is filled with blocks, it disappears. If players run out of spaces to place the next shapes, they lose.",
+		"images" : ["images/project6_01.png"]
+	}
+	]
+};
+
+
+
+
+
 
 projects.display = function() {
 	for(var i = 0; i < projects.projects.length; i++) {
 		$("#projects").append(HTMLprojectStart);
-		var formattedTitile = HTMLprojectTitle.replace("%data%", projects.projects[i].title);
+		var formattedTitile = HTMLprojectTitle.replace("%data%", projects.projects[i].title).replace("#", projects.projects[i].github);
 		$(".project-entry:last").append(formattedTitile);
 
 		var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[i].dates);
 		$(".project-entry:last").append(formattedDates);
-
+		var formattedKeywords = HTMLprojectKeywords.replace("%data%", projects.projects[i].keywords);
+		$(".project-entry:last").append(formattedKeywords);
 		var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[i].description);
 		$(".project-entry:last").append(formattedDescription);
 
 		if(projects.projects[i].images.length > 0) {
-			for(var j = 0; j < projects.projects[j].images.length; j++) {
-				var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[i].images[j]);
-				$(".project-entry:last").append(formattedImage);
+			var formattedImageStart = HTMLprojectImagesStart.replace(/%data%/g, i);
+			$(".project-entry:last").append(formattedImageStart);
+			for(var j = 0; j < projects.projects[i].images.length; j++) {
+				var formattedImage = HTMLprojectImage.replace(/%data%/g, projects.projects[i].images[j]).replace("%index%", j).replace("%total%", projects.projects[i].images.length);
+				var formattedDot = HTMLprojectDot.replace("%data%", j).replace("%proj_index%", i);
+				$(".slideshow-container:last").append(formattedImage);
+				$(".dots:last").append(formattedDot);
 			}
 		}
 	}
@@ -192,4 +221,41 @@ projects.display = function() {
 
 projects.display();
 $("#mapDiv").append(googleMap);
+//script for slideshow
+var Project = function(index) {
+  this.slideIndex = 1;
+  this.showSlides = function(n, index) {
+    var i;
+    var project = "project" + index;
+    var slides = $("." + project+ " .mySlides");
+    var dots = $("." + project+ " .mySlides");
+    if (n > slides.length) {this.slideIndex = 1}    
+    if (n < 1) {this.slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    console.log(this)
+    console.log(project + " " + this.slideIndex);
+    slides[this.slideIndex-1].style.display = "block";  
+    dots[this.slideIndex-1].className += " active";
+    };
+};
+var projects = [];
+for(var i = 0; i < $(".slideshow-container").length; i++) {
+  var project = new Project(i);
+  project.showSlides(1, i);
+  projects.push(project);
+}
+function plusSlides(n, index) {
+	var proj = projects[index];
+	proj.showSlides(proj.slideIndex += n, index);
+}
 
+function currentSlide(n, index) {
+	var proj = projects[index];
+  	proj.showSlides(proj.slideIndex = n + 1, index);
+  	console.log("i opened the " + index + "th project's " + n + "th image");
+}
