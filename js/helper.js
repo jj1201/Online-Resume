@@ -31,16 +31,16 @@ var HTMLprojectDescription = '<p><br>%data%</p>';
 var HTMLprojectImagesStart = '<div class="slideshow-container project%data%"><a class="prev" onclick="plusSlides(-1, %data%)">&#10094;</a><a class="next" onclick="plusSlides(1, %data%)">&#10095;</a></div><br><div style="text-align:center" class="dots"></div>'
 var HTMLprojectImage = '<div class="mySlides fade"><div class="numbertext">%index% /%total%</div><a target="_blank" href="%data%"><img src="%data%" style="width:100%"></a><div class="text">Screenshot</div>';
 var HTMLprojectDot = '<span class="dot" onclick="currentSlide(%data%, %proj_index%)"></span>';
-var HTMLschoolStart = '<div class="education-entry"></div> ';
+var HTMLschoolStart = '<div class="education-entry"></div><br> ';
 var HTMLschoolName = '<a href="#">%data%';
-var HTMLschoolDegree = ' -- %data%</a>';
+var HTMLschoolDegree = ' -- %data%</a><br>';
 var HTMLschoolDates = '<div class="date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
 var HTMLschoolMajor = '<em><br>Major: %data%</em>';
 
 var HTMLonlineClasses = '<h3>Online Classes</h3>';
 var HTMLonlineTitle = '<a href="#">%data%';
-var HTMLonlineSchool = ' - %data%</a>';
+var HTMLonlineSchool = ' - %data%</a><br>';
 var HTMLonlineDates = '<div class="date-text">%data%</div>';
 var HTMLonlineURL = '<br><a href="#">%data%</a>';
 
