@@ -25,6 +25,9 @@ h6 {
   padding: 0 5%;
   overflow: auto;
 }
+.work-entry {
+  margin-top: 10px;
+}
 
 h1 {
   font-size: 40px;
@@ -94,7 +97,9 @@ a {
   display: block;*/
   color: inherit;
 }
-
+.education-entry a {
+  color: #1199c3 !important;
+}
 .project-entry a {
   color: #1199c3;
   margin-top: 10px !important;

@@ -5,7 +5,7 @@ var HTMLheaderRole = '<span>%data%</span><hr>';
 var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li>';
 var HTMLmobile = '<li class="flex-item"><span class="orange-text">mobile</span><span class="white-text">%data%</span></li>';
 var HTMLemail = '<li class="flex-item"><span class="orange-text">email</span><span class="white-text"><a href="mailto:jennycjk1201@gmail.com target="_top">%data%</a></span></li>';
-var HTMLlinkedIn = '<li class="flex-item"><span class="orange-text">linkedIn</span><span class="white-text">%data%</span></li>';
+var HTMLlinkedIn = '<li class="flex-item"><span class="orange-text">linkedIn</span><span class="white-text"><a href="https://www.linkedin.com/in/jenny-chen-0b45a9148/" target="_blank">%data%</a></span></li>';
 var HTMLgithub = '<li class="flex-item"><span class="orange-text">github</span><span class="white-text"><a href="https://github.com/jj1201" target="_blank">%data%</a></span></li>';
 var HTMLblog = '<li class="flex-item"><span class="orange-text">blog</span><span class="white-text">%data%</span></li>';
 var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span><span class="white-text">%data%</span></li>';
@@ -17,8 +17,8 @@ var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills
 var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
-var HTMLworkEmployer = '<a href="#">%data%';
-var HTMLworkTitle = ' - %data%</a>';
+var HTMLworkEmployer = '<a style="color:#1199c3" href="#">%data%';
+var HTMLworkTitle = ' - %data%</a><br>';
 var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '<p><br>%data%</p>';
@@ -39,7 +39,7 @@ var HTMLschoolLocation = '<div class="location-text">%data%</div>';
 var HTMLschoolMajor = '<em><br>Major: %data%</em>';
 
 var HTMLonlineClasses = '<h3>Online Classes</h3>';
-var HTMLonlineTitle = '<a href="#">%data%';
+var HTMLonlineTitle = '<a href="#" target="_blank">%data%';
 var HTMLonlineSchool = ' - %data%</a><br>';
 var HTMLonlineDates = '<div class="date-text">%data%</div>';
 var HTMLonlineURL = '<br><a href="#">%data%</a>';

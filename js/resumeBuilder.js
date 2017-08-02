@@ -111,10 +111,19 @@ var work = {
 		"title" : "Web Developer",
 		"employer" : "XCG Design Corp",
 		"location" : "San Fransico, CA",
-		"dates" : "March 2017 - Now",
-		"description" : "· Contributed to maintain and migrate databases. <br> · Assisted in planning and implementing inner system websites. <br>· Provided technical support to other web design team members as directed." 
+		"dates" : "March 2017 - 	Present",
+		"description" : "Designed a new UI for an internal search engine. <br>Provided technical support to other web design team members as directed." 
+
+	},
+	{
+		"title" : "Assistant Researcher ",
+		"employer" : "EAGLE Laboratory, Zhejiang University",
+		"dates" : "2014 - 2015",
+		"location" : "Zhejiang, China",
+		"description" : "Wrote a thesis on social information depression models from algebraic connectivity. <br>Provided a proposal for an efficient algorithm to reduce the dissemination of bad information." 
 
 	}
+
 	]
 };
 work.display = function () {
@@ -134,11 +143,11 @@ work.display = function () {
 	}
 };
 
-//work.display();
+work.display();
 var projects = {
 	"projects" : [
 	{
-		"title" : "National park Map",
+		"title" : "National Park Map",
 		"github" : "https://github.com/jj1201/national-park-map",
 		"dates" : "2017",
 		"keywords" : "Google Map API, Kockout JS, jQuery, mobile responsive",
