@@ -9,7 +9,7 @@ var bio = {
 		"linkedIn" : "Jenny Chen",
 		"location" : "San Francisco"
 	},
-	"welcomeMessage" : "Hi there! I am currently loopking for software developer position in the bay area. I love designing and building fast and robust websites that everyone can enjoy and find helpful. Thanks for stopping by!",
+	"welcomeMessage" : "Hi there! I am a software developer passionate about building web-based applications. I love designing and building fast and robust websites that everyone can enjoy and find helpful. Thanks for stopping by!",
 	"skills" : ["html/css/javascript", "jQuery", "Bootstrap & Knockout JS", "Gulp", "Jasmine", "Java"],
 	"biopic" :  "images/jiajia.jpg"
 };
@@ -148,7 +148,7 @@ var projects = {
 	"projects" : [
 	{
 		"title" : "National Park Map",
-		"github" : "https://github.com/jj1201/national-park-map",
+		"github" : "https://jj1201.github.io/national-park-map/dist/",
 		"dates" : "2017",
 		"keywords" : "Google Map API, Kockout JS, jQuery, mobile responsive",
 		"description" : "I created a website that lists all the national parks and shows them in the map. I used Kockout JS to handle hte list and the filter functionality, and Google Map API to show all the park markers in the map and track click events on markers.",
@@ -156,7 +156,7 @@ var projects = {
 	},
 	{
 		"title" : "Bug Invasion",
-		"github" : "https://github.com/jj1201/Bug-Invasion",
+		"github" : "https://jj1201.github.io/Bug-Invasion/",
 		"dates" : "2017",
 		"keywords" : "Objective Oriented Programming, Game Design",
 		"description" : "As the name indicated, the bugs are coming and we are trying to survive till the last level.",
@@ -164,7 +164,7 @@ var projects = {
 	},
 	{
 		"title" : "Portfolio",
-		"github" : "https://github.com/jj1201/Portfolio",
+		"github" : "https://jj1201.github.io/Portfolio/",
 		"dates" : "2017",
 		"keywords" : "Responsive website, Bootstrap",
 		"description" : "I created an online Portfolio as part of Udacity FrontEnd Nanodegree.",
