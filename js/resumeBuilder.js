@@ -9,7 +9,7 @@ var bio = {
 		"linkedIn" : "Jenny Chen",
 		"location" : "San Francisco"
 	},
-	"welcomeMessage" : "Hi there! I am a software developer passionate about building web-based applications. I love designing and building fast and robust websites that everyone can enjoy and find helpful. Thanks for stopping by!",
+	"welcomeMessage" : "Hi there! I am a software engineer passionate about solving problems and building applications that help people's day to day lives. Thanks for stopping by!",
 	"skills" : ["html/css/javascript", "jQuery", "Bootstrap & Knockout JS", "Gulp", "Jasmine", "Java"],
 	"biopic" :  "images/jiajia.jpg"
 };
