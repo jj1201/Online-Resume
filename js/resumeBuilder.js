@@ -107,14 +107,14 @@ education.display();
 
 var work = {
 	"jobs" : [
-	{
-		"title" : "Web Developer",
-		"employer" : "XCG Design Corp",
-		"location" : "San Fransico, CA",
-		"dates" : "March 2017 - 	Present",
-		"description" : "Designed a new UI for an internal search engine. <br>Provided technical support to other web design team members as directed." 
+	// {
+	// 	"title" : "Web Developer",
+	// 	"employer" : "XCG Design Corp",
+	// 	"location" : "San Fransico, CA",
+	// 	"dates" : "March 2017 - 	Present",
+	// 	"description" : "Designed a new UI for an internal search engine. <br>Provided technical support to other web design team members as directed." 
 
-	},
+	// },
 	{
 		"title" : "Assistant Researcher ",
 		"employer" : "EAGLE Laboratory, Zhejiang University",
